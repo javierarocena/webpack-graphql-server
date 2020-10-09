@@ -3,6 +3,7 @@ type PersonType {
     name: String
     id: String
     sex: String
+    color: String
     matches: [PersonType]
 }
 

@@ -1,7 +1,8 @@
 {
-  "name": "webpack-graphql-server",
+  "name": "test-webpack-graphql-server",
   "version": "0.2.1",
   "description": "Starter kit for apollo GraphQL server using webpack and typescript",
+  "web": "https://github.com/DxCx/webpack-graphql-server",
   "main": "dist/main.js",
   "scripts": {
     "build": "webpack",
@@ -65,7 +66,7 @@
     "ts-jest": "^21.1.4",
     "tslint": "^5.8.0",
     "tslint-loader": "^3.5.3",
-    "typescript": "2.6.1",
+    "typescript": "^3.5.1",
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"
   },
