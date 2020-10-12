@@ -2,7 +2,7 @@ export const typeDef = `
 # Root Query
 type Query {
     testString: String
-    testStringConnector: String
+    testStringConnector: PersonType 
 }
 `;
 

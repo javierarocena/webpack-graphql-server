@@ -29,8 +29,14 @@ function verbosePrint(port, enableGraphiql) {
 
 export class TestConnector {
   public get testString() {
-    return "it works from connector as well!";
+    return {
+      name: "it works from connector as well!",
+      sex: "amarillo"
+    };
   }
+  // public get testString() {
+  //   return "it works from connector as well!";
+  // }
 }
 
 export function main(options: IMainOptions) {

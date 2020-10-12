@@ -15,6 +15,7 @@
     "coverage:notify": "npm run coverage -- --watch --notify",
     "start": "npm run build && node dist/main.js",
     "start:watch": "concurrently \"npm run build:watch\" \"nodemon dist/main.js\"",
+    "stop": "kill -9 $(lsof -t -i:3000)",
     "preupver": "npm test",
     "upver": "standard-version"
   },

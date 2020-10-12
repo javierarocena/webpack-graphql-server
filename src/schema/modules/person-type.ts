@@ -1,21 +1,21 @@
 export const typeDef = `
-type PersonType {
-    name: String
-    id: String
-    sex: String
-    color: String
-    matches: [PersonType]
-}
+  type PersonType {
+      name: String
+      id: String
+      sex: String
+      color: String
+      matches: [PersonType]
+  }
 
-type Query {
-    getPerson(id: String!): PersonType
-    persons: [PersonType]
-}
+  type Query {
+      getPerson(id: String!): PersonType
+      persons: [PersonType]
+  }
 
-# Mutations
-type Mutation {
-    addPerson(name: String!, sex: String!): PersonType
-}
+  # Mutations
+  type Mutation {
+      addPerson(name: String!, sex: String!): PersonType
+  }
 `;
 
 export const resolver = {
