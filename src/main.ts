@@ -6,10 +6,12 @@ import * as cors from 'cors';
 import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 import {persons, findPerson, addPerson} from './data-base/person-database';
+import { TestConnector } from './TestConnector';
 
 // Default port or given one.
 export const GRAPHQL_ROUTE = "/graphql";
 export const GRAPHIQL_ROUTE = "/graphiql";
+export const SERVER_PORT  = "3000";
 
 interface IMainOptions {
   enableCors: boolean;
@@ -27,18 +29,6 @@ function verbosePrint(port, enableGraphiql) {
   }
 }
 
-export class TestConnector {
-  public get testString() {
-    return {
-      name: "it works from connector as well!",
-      sex: "amarillo"
-    };
-  }
-  // public get testString() {
-  //   return "it works from connector as well!";
-  // }
-}
-
 export function main(options: IMainOptions) {
   let app = express();
 
@@ -51,6 +41,7 @@ export function main(options: IMainOptions) {
   }
 
   let testConnector = new TestConnector();
+
   app.use(GRAPHQL_ROUTE, bodyParser.json(), graphqlExpress({
     context: {
       testConnector,
@@ -81,7 +72,7 @@ export function main(options: IMainOptions) {
 
 /* istanbul ignore if: main scope */
 if (require.main === module) {
-  const PORT = parseInt(process.env.PORT || '3000', 10);
+  const PORT = parseInt(process.env.PORT || SERVER_PORT, 10);
 
   // Either to export GraphiQL (Debug Interface) or not.
   const NODE_ENV = process.env.NODE_ENV !== "production" ? "dev" : "production";

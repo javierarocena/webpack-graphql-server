@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es6", "esnext"],
+    "lib": [
+      "es6",
+      "esnext"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -14,7 +17,8 @@
     ]
   },
   "files": [
-    "src/main.ts"
+    "src/main.ts",
+    "./src/TestConnector.ts"
   ],
   "exclude": [
     "node_modules"
